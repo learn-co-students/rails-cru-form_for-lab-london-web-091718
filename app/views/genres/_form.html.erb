@@ -1,0 +1,11 @@
+<% if flash[:errors] %>
+  <% flash[:errors].each do |e| %>
+    <%= e %>
+  <% end %>
+<% end %>
+
+<%= form_for(@genre) do |f| %>
+  <%= f.text_field :name %>
+  
+  <%= f.submit id:"submit" %>
+<% end %>
