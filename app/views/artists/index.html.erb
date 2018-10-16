@@ -1,0 +1,13 @@
+<% @artists.each do |a| %>
+<ul>
+  <li>
+    <p>Name: <%= link_to a.name, artist_path(a) %></p>
+    <p>Bio: <%= a.bio %></p>
+    <br>
+  </li>
+</ul>
+<% end %>
+<p><%= link_to "Add New Artist", new_artist_path %></p>
+<br>
+<p> <%= link_to "Go to - All Songs", songs_path %> </p>
+<p> <%= link_to "Go to - All Genres", genres_path %> </p>
