@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>This is the Genres Page</h1>
+    <h3>Click a Genre to find out more!</h3>
+    <hr>
+    <p> | <%= link_to "Create a New Genre", new_genre_url %> | <%= link_to "View All Artists", artists_url %> | <%= link_to "View All Songs", songs_url %> | </p>
+    <hr>
+    <% @genres.each do |genre| %>
+    <p><%= link_to genre.name, genre_url(genre) %></p>
+    <% end %>
+  </body>
+</html>
