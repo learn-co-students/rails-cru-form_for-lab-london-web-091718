@@ -1,0 +1,9 @@
+<h1> All Artists: </h1>
+
+<div><% @artists.each do |a| %></div>
+  <p><%= a.name %></p>
+  <p>Bio: <%= a.bio %></p>
+  <br>
+<% end %>
+
+<%= link_to "Add Artist Here", new_artist_path %>

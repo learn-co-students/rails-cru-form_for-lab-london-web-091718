@@ -1,0 +1,9 @@
+<h1> Add Genre </h1>
+<br>
+<%= form_for(@genre) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Cancel", genres_path %>
