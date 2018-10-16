@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>This is the Songs Page</h1>
+    <h3>Click on a Song to find out more!</h3>
+    <hr>
+    <p> | <%= link_to "Create a New Song", new_song_url %> | <%= link_to "View All Artists", artists_url %> | <%= link_to "View All Genres", genres_url %> | </p>
+    <hr>
+    <% @songs.each do |song| %>
+
+    <p><%= link_to song.name, song_url(song) %></p>
+
+<% end %>
+  </body>
+</html>

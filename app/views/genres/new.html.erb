@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  <h1>Create a New Genre</h1>
+</br>
+<p><%= link_to "Cancel", genres_url %></p>
+<hr>
+    <%= form_for @genre do |f| %>
+
+    <p><%= f.label :name %>
+    <%= f.text_field :name %></p>
+<hr>
+    <p><%= f.submit %></p>
+    <% end %>
+
+  </body>
+</html>

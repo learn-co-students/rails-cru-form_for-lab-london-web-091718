@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  <h1>Edit Artist</h1>
+
+  <%= form_for @artist do |f| %>
+
+  <p><%= f.label :name %></p>
+  <p><%= f.text_field :name %></p>
+
+  <p><%= f.label :bio %></p>
+  <p><%= f.text_area :bio %></p>
+
+  <p><%= f.submit %></p>
+  <% end %>
+  </body>
+</html>
