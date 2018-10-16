@@ -1,0 +1,13 @@
+<h1> Add Song </h1>
+<br>
+<%= form_for(@song) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :artist_id %>
+  <%= f.collection_select :artist_id, @artist, :id, :name %>
+  <%= f.label :genre_id %>
+  <%= f.collection_select :genre_id, @genre, :id, :name %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Cancel", songs_path %>
